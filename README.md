@@ -1,4 +1,4 @@
-# Reviews_Makers
+# Reviews Makers
 
-This repo contains the exercises I hva edone during Makers Reviews
+This repo contains the exercises I have done during Makers Reviews
 
