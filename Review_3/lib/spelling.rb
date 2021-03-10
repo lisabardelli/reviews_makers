@@ -1,40 +1,30 @@
-def check_spelling(string) 
-    dictonary = ["The", "Hello", "World"]
-    array = string.split(" ")
-    result = ""
+def check_spelling(string)
+  dictonary = %w[The Hello World]
+  array = string.split(' ')
+  result = ''
 
-    last_element = array.last
+  last_element = array.last
 
-    array.each do |word| 
+  array.each do |word|
+    if !include?(word)
+      word = '~' + word + '~' + ' ' if word != last_element
+      word = '~' + word + '~' if word == last_element
+      result += word
+    else
+      result += word + ' ' if word != last_element
+      result += word if word == last_element
+    end
+  end
 
-            if  !include?(word)
-                word = "~"+word+"~"+" " if word != last_element
-                word = "~"+word+"~" if word == last_element
-                result += word
-            else 
-                result += word + " " if word != last_element
-                result += word if word == last_element
-                end 
-        
-    end 
-
-    return result 
-
-
-end 
-
-
+  result
+end
 
 def include?(string)
-    dictonary = ["The", "Hello", "World"]
-    array = string.split(" ")
+  dictonary = %w[The Hello World]
+  array = string.split(' ')
 
-    array.each do |word|
-    if  dictonary.include? (word)
-        return true
-       else 
-        return false
-       end 
-    end 
-
-end 
+  array.each do |word|
+    return true if dictonary.include?(word)
+    return false if !dictonary.include?(word)
+  end
+end
