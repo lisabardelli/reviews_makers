@@ -1,16 +1,10 @@
 def check_spelling(string)
-  dictonary = %w[The Hello World]
   array = string.split(' ')
   result_array = []
 
-  last_element = array.last
-
   array.each do |word|
-    if !include?(word)
-      result_array.push("~#{word}~")
-    else
-      result_array.push(word.to_s)
-    end
+    result_array.push("~#{word}~") unless include?(word)
+    result_array.push(word.to_s) if include?(word)
   end
 
   result_array.join(' ')
@@ -21,7 +15,6 @@ def include?(string)
   array = string.split(' ')
 
   array.each do |word|
-    return true if dictonary.include?(word)
     return false unless dictonary.include?(word)
   end
 end
