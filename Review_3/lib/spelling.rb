@@ -7,10 +7,10 @@ def check_spelling(string)
 
     array.each do |word| 
 
-            if  include?(word)
+            if  !include?(word)
                 word = "~"+word+"~"+" " if word != last_element
                 word = "~"+word+"~" if word == last_element
-        
+                result += word
             else 
                 result += word + " " if word != last_element
                 result += word if word == last_element
@@ -30,7 +30,7 @@ def include?(string)
     array = string.split(" ")
 
     array.each do |word|
-    if  !dictonary.include? (word)
+    if  dictonary.include? (word)
         return true
        else 
         return false
