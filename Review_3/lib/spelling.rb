@@ -25,6 +25,6 @@ def include?(string)
 
   array.each do |word|
     return true if dictonary.include?(word)
-    return false if !dictonary.include?(word)
+    return false unless dictonary.include?(word)
   end
 end

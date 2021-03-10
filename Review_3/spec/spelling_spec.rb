@@ -8,7 +8,6 @@ describe "check_spelling" do
 
     it "accepts a string with 2 words as input and returns a string" do
         string = "Hello World"
-        # include a dictionary to make it fail
         expect(check_spelling(string)).to eq("Hello World")
     end
 
