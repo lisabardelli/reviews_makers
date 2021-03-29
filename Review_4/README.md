@@ -10,7 +10,7 @@ once the sum string has been evaluated, the system split output and evaluation r
 Build String calculator 
 
 
-| input  | output        |
+| Input  | Output        |
 | ------ | ------------- |
 |"1 + 1" | ["1 + 1" , 2] |
 |"1 - 1" | ["1 - 1" , 0] |
