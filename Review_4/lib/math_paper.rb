@@ -1,16 +1,13 @@
 def  string_calculator(papers)
 result  = []
-grades_array = papers.split(" ")
-sum  = 0
+grades = papers.split(" ")
 result << papers
 
-grades_array.each do |element|
-   if element != "+" 
-
-  sum += element.to_i
-   end   
-end 
-result << sum
+   
+result << grades[0].to_i + grades[2].to_i if grades[1] == "+" 
+result << grades[0].to_i - grades[2].to_i if grades[1] == "-"  
+result << grades[0].to_i * grades[2].to_i if grades[1] == "*" 
+result << grades[0].to_i / grades[2].to_i if grades[1] == "/" 
 
 return result 
 end 

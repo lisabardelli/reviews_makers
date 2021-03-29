@@ -8,6 +8,13 @@ end
 it "returns the string and sum of the two elements" do
     expect(string_calculator("1 + 1")).to eq(["1 + 1", 2])
 end
-
-
+it "returns the string and first element - second element" do
+    expect(string_calculator("1 - 1")).to eq(["1 - 1", 0])
+end
+it "returns the string and first element * second element" do
+    expect(string_calculator("1 * 1")).to eq(["1 * 1", 1])
+end
+it "returns the string and first element / second element" do
+    expect(string_calculator("1 / 1")).to eq(["1 / 1", 1])
+end
 end
