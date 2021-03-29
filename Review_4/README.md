@@ -10,10 +10,11 @@ once the sum string has been evaluated, the system split output and evaluation r
 Build String calculator 
 
 
-input | output
-"1 + 1" | ["1 + 1" , 2]
-"1 - 1" | ["1 - 1" , 0]
-"1 * 1" | ["1 * 1" , 1]
-"1 / 1" | ["1 / 1" , 1]
-"" | ["", 0]
-"1+1" | MathError "Input must be a valid mathematical string separated by a space"
+| input  | output        |
+| ------ | ------------- |
+|"1 + 1" | ["1 + 1" , 2] |
+|"1 - 1" | ["1 - 1" , 0] |
+|"1 * 1" | ["1 * 1" , 1] |
+|"1 / 1" | ["1 / 1" , 1] |
+|"" | ["", 0] |
+|"1+1" | MathError "Input must be a valid mathematical string separated by a space" |
